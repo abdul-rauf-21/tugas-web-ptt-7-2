@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<!-- Buat tabel, kolom pertama nama lagu, kolom kedua tmbol play -->
+	<p class="title">Pilih salah satu musik yang ada di bawah!</p>
+	<canvas id="output" height="80" width="200"></canvas>
+	<audio controls autoplay id="music_controls">
+		<source>
+	</audio>
+	<table>
+		<tr>
+			<th>No</th>
+			<th>Judul lagu</th>
+			<th>Play Button</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td class="music_name" data-music="music/pekora_bgm.mp3">Usada Pekora BGM</td>
+			<td class="center">
+				<button class="play">Play</button>
+			</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td class="music_name" data-music="music/gura_bgm.oga">Gawr Gura BGM</td>
+			<td class="center">
+				<button class="play">Play</button>
+			</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td class="music_name" data-music="music/amelia_bgm.ogg">Amelia Watson BGM</td>
+			<td class="center">
+				<button class="play">Play</button>
+			</td>
+		</tr>
+	</table>
+	<script src="https://cdn.jsdelivr.net/gh/foobar404/wave.js/dist/bundle.iife.js"></script>
+	<script src="js/main.js" type="module"></script>
+</body>
+</html>
