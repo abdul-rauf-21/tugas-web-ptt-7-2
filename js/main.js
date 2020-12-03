@@ -47,3 +47,5 @@ const options = {
 }
 
 wave.fromElement("music_controls","output",options);
+
+console.log(navigator.bluetooth)
