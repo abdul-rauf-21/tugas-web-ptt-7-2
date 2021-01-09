@@ -5,11 +5,9 @@ import { select, selectAll, getData } from './helper.js';
 const musicData = getData('.music_name', 'data-music');
 
 // Mengubah judul sesuai dengan music yang dimainkan
-const changeMusicTitle = (index) =>{
-	select('.title').textContent = selectAll('.music_name')[index].textContent;
-}
+const changeMusicTitle = (index) => select('.title').textContent = selectAll('.music_name')[index].textContent;
 
-const playButtonEvent = selectAll('button').forEach( (val, index) =>{
+selectAll('button').forEach( (val, index) =>{
 	val.addEventListener('click', function(){
 		/* Load music jika atribut src dari audio source kosong atau jika index musik yang dimainkan
 		 * tidak sesuai dengan index play button
@@ -21,9 +19,7 @@ const playButtonEvent = selectAll('button').forEach( (val, index) =>{
 			/* Reset semua tombol menjadi play ketika tombol play lain ditekan ketika tombol lainnya
 			 * sedang di pause
 			 */
-			for( const el of selectAll('.play') ){
-				el.textContent = 'Play';
-			}
+			for( const el of selectAll('.play') ) el.textContent = 'Play';
 			selectAll('.play')[index].textContent = 'Pause';
 		} else {
 			if( select('audio').paused ){
@@ -42,10 +38,8 @@ const playButtonEvent = selectAll('button').forEach( (val, index) =>{
 let wave = new Wave();
 
 const options = {
-	type : "dualbars blocks",
-	colors : [" #00a8ff"]
+	type : 'dualbars blocks',
+	colors : ['#00a8ff']
 }
 
-wave.fromElement("music_controls","output",options);
-
-console.log(navigator.bluetooth)
+wave.fromElement('music_controls', 'output', options);
